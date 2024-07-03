@@ -1,4 +1,4 @@
-import COLLECTIONS from "../client/data/collections.ts";
+import COLLECTIONS from "./data/collections.ts";
 import { CollectionItem } from "./types.ts";
 
 export class Database {
@@ -25,8 +25,6 @@ export class Database {
   async deleteOne(itemId: string) {
     const index = this.#collection.findIndex(({ id }) => id === itemId);
     if (index < 0) return null;
-
-    console.log(index);
 
     const deletedItems = this.#collection.splice(index, 1);
     return deletedItems[0];
