@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@oak/oak": "jsr:@oak/oak@^16.1.0",
+    "@std/dotenv": "jsr:@std/dotenv@^0.224.2"
+  }
+}
