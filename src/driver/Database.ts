@@ -26,8 +26,7 @@ export class Database {
     const index = this.#collection.findIndex(({ id }) => id === itemId);
     if (index < 0) return null;
 
-    const deletedItems = this.#collection.splice(index, 1);
-    return deletedItems[0];
+    this.#collection.splice(index, 1);
   }
 
   async updateOne(itemId: string, itemData: Omit<CollectionItem, "id">) {
