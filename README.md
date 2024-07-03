@@ -36,7 +36,7 @@ Go to the project directory
 
 Start development server
 ```bash
-  deno run --allow-net --allow-read --watch src/server.ts
+  deno task dev
 ```
 
 Test endpoint
